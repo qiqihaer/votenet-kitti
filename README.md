@@ -1,1 +1,0 @@
-# votenet-kitti
