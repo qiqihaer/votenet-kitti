@@ -36,6 +36,12 @@ The details can be found in [VoteNet official code release](https://arxiv.org/pd
 
 I have added some visualization codes in kitti_vote_dataset.py, which are commented out for the convenience of training. And the visualizations are as follows:
 
+This is the visualization of points and 3D boxes in one augmentated scene.
+![teaser](https://github.com/qiqihaer/votenet-kitti/blob/master/kitti_demo_files/train_batch/point1.png)
 
+This is the visualization of the votes in one augmentated scene. The groundtruth votes are boxes's centers. 
+![teaser](https://github.com/qiqihaer/votenet-kitti/blob/master/kitti_demo_files/train_batch/point2.png)
 
+This is the detection results visualization. The red boxes are from prediction results and the yellow ones are from groundtruth boxes.
+![teaser](https://github.com/qiqihaer/votenet-kitti/blob/master/kitti_demo_files/results/pred_and_gt.png)
 
