@@ -243,7 +243,7 @@ class KittiVoteDataset(KittiDataset):
         else:
             pts_input = aug_pts_rect
 
-        kitti_utils.data_viz(objects=aug_gt_boxes3d, pts=pts_input, name='demo_{}'.format(index))  # viz
+        # kitti_utils.data_viz(objects=aug_gt_boxes3d, pts=pts_input, name='demo_{}'.format(index))  # viz
 
         # ------------------------------- LABELS ------------------------------
         box3d_centers = np.zeros((MAX_NUM_OBJ, 3))
@@ -327,13 +327,13 @@ class KittiVoteDataset(KittiDataset):
         ret_dict['vote_label_mask'] = point_votes_mask.astype(np.int64)
 
         # kitti_utils.data_viz(objects=aug_gt_boxes3d, pts=pts_input, name='demo_{}'.format(index))  # viz
-        kitti_utils.point_viz(pts_input, name='all_points_{}'.format(index))
-        kitti_utils.box_viz(aug_gt_boxes3d, name='all_boxes_{}'.format(index))
-        points_in_boxes = pts_input[point_votes_mask == 1, :]
-        kitti_utils.point_viz(points_in_boxes, name='point_in_boxes_{}'.format(index))
-        kitti_utils.point_viz(box3d_centers, name='centers_{}'.format(index))
-        point_in_box_votes = point_votes[point_votes_mask == 1, 0:3]
-        kitti_utils.point_viz(point_in_box_votes + points_in_boxes, name='recovered_center_{}'.format(index))
+        # kitti_utils.point_viz(pts_input, name='all_points_{}'.format(index))
+        # kitti_utils.box_viz(aug_gt_boxes3d, name='all_boxes_{}'.format(index))
+        # points_in_boxes = pts_input[point_votes_mask == 1, :]
+        # kitti_utils.point_viz(points_in_boxes, name='point_in_boxes_{}'.format(index))
+        # kitti_utils.point_viz(box3d_centers, name='centers_{}'.format(index))
+        # point_in_box_votes = point_votes[point_votes_mask == 1, 0:3]
+        # kitti_utils.point_viz(point_in_box_votes + points_in_boxes, name='recovered_center_{}'.format(index))
 
         # corner3d = kitti_utils.single_box3d_to_corner3d(aug_gt_boxes3d[0])
         # box3d = kitti_utils.corer3d_to_box3d(corner3d)
